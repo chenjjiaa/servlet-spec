@@ -30,8 +30,7 @@ public class WebUtil {
                 Method setMethod = c.getDeclaredMethod(setMethodName, String.class);
                 setMethod.invoke(object,request.getParameter(fieldName)); // 调用方法，实现对象属性赋值
             } catch (Exception e) {
-                // 有些对象没有某些参数，就不必理会 不用抛出异常
-                
+                // 有些对象没有某些参数，不用抛出异常
             }
         }
         return object;
